@@ -16,5 +16,9 @@ module.exports = {
   plugins: [
     'vue',
     '@typescript-eslint'
-  ]
+  ],
+  rules: {
+    'vue/script-setup-uses-vars': 'error',
+    'vue/multi-word-component-names': 'off'
+  }
 }
