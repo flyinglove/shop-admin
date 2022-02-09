@@ -17,6 +17,7 @@ export default defineComponent({
 })
 </script> -->
 <script lang="ts" setup>
+import locale from 'element-plus/lib/locale/lang/zh-cn'
 // import { ref } from 'vue'
 // 如果不用变量接收的话， 本地如果定义同名变量会覆盖掉props传入的值
 
@@ -30,16 +31,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <router-view />
+  <el-config-provider :locale="locale">
+    <router-view />
+  </el-config-provider>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
